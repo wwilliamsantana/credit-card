@@ -1,5 +1,6 @@
 import Image from "next/image"
-import cardBackground from "../assets/card-background.png"
+import flagVisa from "../assets/flag-visa.svg"
+import contactless from "../assets/contactless.svg"
 import { ShieldCheckIcon } from "lucide-react"
 
 export default function Home() {
@@ -31,8 +32,22 @@ export default function Home() {
             </section>
           </form>
 
-          <div className="">
-            <Image src={cardBackground} alt="card-background" />
+          <div>
+            <div className="bg-[url('../assets/card-background.png')] bg-no-repeat bg-cover w-[268px] h-[168px] py-4 px-6">
+              
+              <div className="py-4 px-6 ">
+                <div className="flex justify-between items-center ">
+                  <Image src={flagVisa} alt="" width={32}/>
+                  <Image src={contactless} alt="" width={24}/>
+                </div>
+                <div className="mt-6 font-semibold text-gray-50">4716 8039 0245 7898</div>
+                <div className="flex justify-between items-center mt-3">
+                  <div className="text-sm text-gray-400">Seu nome aqui</div>
+                  <div className="text-sm text-gray-400">** / **</div>
+                </div>
+              </div>
+
+            </div>
             <div className="text-sm text-gray-200 flex justify-center gap-2">
               <ShieldCheckIcon size={20}  fill="green"/>
               <span>Seus dados estão seguros</span>
