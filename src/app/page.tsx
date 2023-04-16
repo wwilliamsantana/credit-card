@@ -41,7 +41,11 @@ export default function Home() {
         </div>
           
   
-        <button>Adicionar cartão</button>
+        <button
+          className="rounded w-full px-12 py-4 bg-violet-700 text-gray-50 font-semibold text-lg hover:bg-violet-600 outline-none focus:outline-2 focus:outline-gray-50 disabled:opacity-50" 
+        >
+          Adicionar cartão
+        </button>
       </main>
      
    </div>
