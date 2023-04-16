@@ -1,10 +1,8 @@
+
 import './globals.css'
 import { Source_Sans_Pro } from 'next/font/google'
 
-export const metadata = {
-  title: 'Credit Card',
-  description: 'Cartão de crédito',
-}
+
 
 const sourceSansPro = Source_Sans_Pro({ subsets: ['latin'], weight: ["400", "600", "700"]})
 
