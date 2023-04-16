@@ -1,3 +1,5 @@
+'use client'
+
 import { Input } from "./Input";
 import {HelpCircle} from "lucide-react"
 

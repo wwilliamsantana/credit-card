@@ -1,6 +1,6 @@
 import Image from "next/image"
-import flagVisa from "../assets/flag-visa.svg"
-import contactless from "../assets/contactless.svg"
+import flagVisa from "../../assets/flag-visa.svg"
+import contactless from "../../assets/contactless.svg"
 
 export function Card(){
   return (
