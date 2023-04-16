@@ -3,8 +3,6 @@ import { ShieldCheckIcon } from "lucide-react"
 import { FormContainer } from "./components/Form"
 import { Card } from "./components/Card"
 
-
-
 export default function Home() {
     
   return (

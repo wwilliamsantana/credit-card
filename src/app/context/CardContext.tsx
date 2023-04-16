@@ -1,9 +1,10 @@
 'use client'
 
-import { ReactNode, createContext, useContext, useState } from "react";
+import {  ReactNode, createContext, useContext, useState } from "react";
 
 interface CardContext{
-  userId: number
+  formData: FormDataProps | null
+  updateFormData: (data: FormDataProps) => void
 }
 
 const CardContext = createContext({} as CardContext)
@@ -12,11 +13,22 @@ interface CardContextProviderProps{
   children: ReactNode
 }
 
+interface FormDataProps{
+  numberCard: number
+  nameHolder: string
+  validate: number
+  cvv: number
+}
+
 export function CardContextProvider({children}: CardContextProviderProps){
-  const [userId, setUserId] = useState(89)
+  const [formData, setFormData] = useState<FormDataProps | null>(null)
+
+  function updateFormData(data: FormDataProps){
+    setFormData(data)
+  }
 
   return (
-    <CardContext.Provider value={{userId}}>
+    <CardContext.Provider value={{formData, updateFormData}}>
       {children}
     </CardContext.Provider>
   )

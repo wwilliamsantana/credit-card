@@ -1,20 +1,30 @@
+'use client'
 import Image from "next/image"
 import flagVisa from "../../assets/flag-visa.svg"
 import contactless from "../../assets/contactless.svg"
+import { useCardContext } from "../context/CardContext"
 
 export function Card(){
+  const {formData} = useCardContext()
+
   return (
     <div className="bg-[url('../assets/card-background.png')] bg-no-repeat bg-cover w-[268px] h-[168px] py-4 px-6">
               
-    <div className="py-4 px-6 ">
+    <div className="py-4 px-5  ">
       <div className="flex justify-between items-center ">
         <Image src={flagVisa} alt="" width={32}/>
         <Image src={contactless} alt="" width={24}/>
       </div>
-      <div className="mt-6 font-semibold text-gray-50">4716 8039 0245 7898</div>
-      <div className="flex justify-between items-center mt-3">
-        <div className="text-sm text-gray-400">Seu nome aqui</div>
-        <div className="text-sm text-gray-400">** / **</div>
+      <span className="mt-4 font-semibold text-gray-50 block">
+        {formData?.numberCard ? formData.numberCard : "* * * * * * * * * * * * * * * *"}
+      </span>
+      <div className="flex justify-between mt-2 gap-1" >
+        <span className="text-sm  text-gray-400 flex-1">
+          {formData?.nameHolder ? formData?.nameHolder : "Seu nome"}
+          </span>
+        <span className="text-sm text-gray-400 w-3 ">
+          {formData?.validate ? formData?.validate : " **/** "}
+        </span>
       </div>
     </div>
   
