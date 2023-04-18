@@ -24,7 +24,8 @@ Criar layout de forma idêntica ao layout do figma.
 ## Layout
 
 <div align="center">
-  <img alt="Layout" src="https://user-images.githubusercontent.com/84254929/232627573-174133a2-ad97-4e75-bcfb-fee620d0d2f1.PNG" width="80%">
+  <img alt="Layout" src="https://user-images.githubusercontent.com/84254929/232824210-09f04616-007d-4e37-a723-1ed18fecffce.gif" width="80%">
 </div>
+
 
 
