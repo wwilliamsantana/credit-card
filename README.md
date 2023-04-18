@@ -8,19 +8,14 @@ Criar layout de forma idêntica ao layout do figma.
 
 ### Resolução:
 
-- Utilizei o Next.js para criar toda interface seguindo os padrões do figma. Para estilização utilizei o tailwindcss. Utilizei o react-hook-form para manusear os input's dos formulários. É para compartilhar os dados entre os componentes da aplicação utilizei Context API.
-
-### Forma de evoluir o projeto:
-- Adicionar uma máscara nos input's
-- Fazer a validação dos valores do input utilizando zod
-- Fazer o flip do cartão ao adicionar valor ao campo CVV
+- Utilizei o Next.js para criar toda interface seguindo os padrões do figma. Para estilização utilizei o tailwindcss. É para compartilhar os dados entre os componentes da aplicação utilizei Context API. Os input's possuem uma máscara para formatar os dados. É alem disso a aplicação está responsiva.
 
 
  ## :rocket: Techs
  
  * React + TypeScript
  * Next.js
- * React-hook-form
+ * Input-react-mask
  * Eslint
  * Tailwindcss
  * Lucide-react
@@ -30,7 +25,6 @@ Criar layout de forma idêntica ao layout do figma.
 
 <div align="center">
   <img alt="Layout" src="https://user-images.githubusercontent.com/84254929/232627573-174133a2-ad97-4e75-bcfb-fee620d0d2f1.PNG" width="80%">
-
 </div>
 
 
