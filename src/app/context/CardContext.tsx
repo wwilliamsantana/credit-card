@@ -5,6 +5,8 @@ import {  ReactNode, createContext, useContext, useState } from "react";
 interface CardContext{
   formData: FormDataProps | null
   updateFormData: (data: FormDataProps) => void
+  cardFront: boolean
+  updateCardFront: () => void
 }
 
 const CardContext = createContext({} as CardContext)
@@ -14,21 +16,25 @@ interface CardContextProviderProps{
 }
 
 interface FormDataProps{
-  numberCard: number
-  nameHolder: string
-  validate: number
-  cvv: number
+  numberCard: string | null
+  nameHolder: string | null
+  validate: string | null
+  cvv: string | null
 }
 
 export function CardContextProvider({children}: CardContextProviderProps){
   const [formData, setFormData] = useState<FormDataProps | null>(null)
+  const [cardFront, setCardFront] = useState<boolean>(true)
 
   function updateFormData(data: FormDataProps){
     setFormData(data)
   }
+  function updateCardFront(){
+    setCardFront(!cardFront)
+  }
 
   return (
-    <CardContext.Provider value={{formData, updateFormData}}>
+    <CardContext.Provider value={{formData, updateFormData, cardFront, updateCardFront}}>
       {children}
     </CardContext.Provider>
   )

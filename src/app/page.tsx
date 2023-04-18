@@ -1,18 +1,22 @@
+"use client"
 
 import { ShieldCheckIcon } from "lucide-react"
 import { FormContainer } from "./components/Form"
 import { Card } from "./components/Card"
+import { useCardContext } from "./context/CardContext"
+import { CardBack } from "./components/CardBack"
 
 export default function Home() {
+  const {cardFront} = useCardContext()
     
   return (
     <div className='flex justify-center items-center min-h-screen'>
         <main className='p-8 bg-gray-800 grid gap-12  rounded-lg border-gray-700 border'>
 
-          <div className="flex gap-16 items-center">
+          <div className="contentMain flex gap-16 items-center">
             <FormContainer/>
             <section>
-              <Card/>
+              {cardFront ? <Card/> : <CardBack/>}
               <div className="text-sm text-gray-200 flex justify-center gap-2">
                 <ShieldCheckIcon size={20}  fill="green"/>
                 <span>Seus dados estão seguros</span>

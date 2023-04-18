@@ -12,3 +12,30 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+
+.card-front,
+.card-back{
+    animation: flipCard .6s ease-in-out;
+}
+
+
+@keyframes flipCard {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@media(max-width: 768px){
+
+  main{
+   margin-block: 10px;
+  }
+
+  .contentMain{
+    flex-direction: column-reverse;
+  }
+}
