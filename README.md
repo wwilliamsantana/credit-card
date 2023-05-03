@@ -1,7 +1,7 @@
 # Cartão de crédito
 
 ## :computer: Sobre
-Projeto foi idealizado a partir de um desafio proposto pela #Rocketseat, onde foi disponibilizado **APENAS** o layout pelo [FIGMA](https://www.figma.com/community/file/1222904930776225825)
+Projeto foi idealizado a partir de um desafio proposto pela #Rocketseat, onde foi disponibilizado **APENAS** o layout do [FIGMA](https://www.figma.com/community/file/1222904930776225825)
 
 ### Ideia:
 Criar layout de forma idêntica ao layout do figma.
